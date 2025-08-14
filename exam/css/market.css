@@ -1,0 +1,586 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "Vazir";
+    src: url(../font/Vazir-Bold.ttf) format("truetype");
+}
+.header {
+  background: linear-gradient(90deg, #4e9ca0, #357e81);
+  border-bottom: 2px solid white;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.logo-img {
+  height: 10vh;
+  width: 30vw;
+}
+
+.menu-item {
+  list-style-type: none;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item a {
+  display:flex;
+  align-items: center;
+  gap: 0.4rem; /* فاصله متن و آیکون */
+  color: white;
+  font-family: "Vazir";
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.menu-item a:hover {
+  color: yellow;
+  border-bottom: 2px solid yellow;
+
+}
+
+.menu-item a:hover svg {
+  fill: yellow;
+}
+
+.menu-item svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor; /* رنگ آیکون با رنگ متن هماهنگ می‌شود */
+  vertical-align: middle;
+  transition: fill 0.3s ease;
+  margin-left: 0.4rem; /* فاصله بین آیکون و متن */
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    padding: 1rem 2rem;
+    gap: 1rem;
+  }
+
+  .logo-img {
+    height: 25vh;
+  }
+
+  .menu-item {
+    gap: 2rem;
+  }
+
+  .menu-item a {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* پس‌زمینه گرادیان ملایم */
+.search {
+  background: linear-gradient(135deg, #5f9ea0, #8fb9b8);
+  padding: 1.5rem 0;
+  height: auto;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  border-bottom-left-radius: 2.5rem;
+  border-bottom-right-radius: 2.5rem;
+  transition: background 0.5s ease;
+}
+
+.search-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.ul1 ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.3rem;
+  font-family: "vazir", sans-serif;
+  font-size: 1.15rem;
+  color: #f0f0f0;
+  padding: 0;
+  margin: 0;
+  user-select: none; /* جلوگیری از انتخاب ناخواسته متن */
+}
+
+.ul1 li a {
+  color: #f0f0f0;
+  text-decoration: none;
+  padding: 0.3rem 1rem;
+  border-radius: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.ul1 li a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #ffd700;
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5);
+}
+
+/* استایل input */
+.wes {
+  width: 90%;
+  max-width: 28rem;
+  height: 3rem;
+  margin-top: 1.2rem;
+  border-radius: 2.5rem;
+  font-size: 1.1rem;
+  font-family: "vazir", sans-serif;
+  border: 2px solid #ffffffaa;
+  padding: 0 1.5rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  box-shadow: inset 0 0 8px rgba(255,255,255,0.3);
+  transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
+}
+
+.wes::placeholder {
+  color: #eee;
+  opacity: 0.8;
+}
+
+.wes:hover,
+.wes:focus {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-color: #ffd700;
+  color: #222;
+  outline: none;
+  box-shadow: 0 0 10px #ffd700;
+}
+
+/* ریسپانسیو برای نمایش دسکتاپ */
+@media screen and (min-width: 768px) {
+  .search-item {
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+  }
+  .ul1 ul {
+    flex-direction: row;
+    gap: 3rem;
+  }
+  .wes{
+    width: 20vw;
+  }
+}
+
+.cars1 {
+  display: flex; 
+  justify-content: center; 
+  flex-wrap: wrap;
+  gap: 2rem;  
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+.cars1 .item1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  background: #f9f9f9;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 1rem;
+  max-width: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cars1 .item1:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.cars1 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1.5rem;
+  margin-bottom: 1rem;
+  transition: border-radius 1s ease, transform 0.3s ease;
+  cursor: pointer;
+  transform-origin: center center;
+}
+
+.cars1 img:hover {
+  border-radius: 3rem;
+  transform: scale(1.1);
+}
+
+.cars1 img:active {
+  transform: scale(1.2);
+}
+
+.cars1 p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-family: "vazir";
+  color: #444;
+  padding: 0.8rem 1rem;
+  border: 1px inset #ddd;
+  border-radius: 1rem;
+  max-width: 300px;
+  max-height: 120px;
+  overflow-y: auto;
+  opacity: 0.7;
+  transition: opacity 0.5s ease, transform 0.5s ease, color 0.3s ease;
+}
+
+.cars1 p:hover {
+  opacity: 1;
+  color: #222;
+  transform: translateY(-3px);
+}
+
+/* ریسپانسیو موبایل */
+@media screen and (max-width: 767px) {
+  .cars1 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cars1 .item1 {
+    max-width: 90%;
+  }
+}
+
+/* ریسپانسیو تبلت و بزرگتر */
+@media screen and (min-width: 768px) {
+  .cars1 {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .cars1 img {
+    margin-top: 1rem;
+    width: 40vw;
+  }
+  .search {
+    height: 20vh;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .cars1 {
+    justify-content: space-evenly;
+  }
+  .cars1 img {
+    margin-top: 2rem;
+    width: 30vw;
+    height: auto;
+  }
+  .logo-img {
+    height: 25vh;
+    width: 20vw;
+  }
+}
+
+.cars2 {
+  display: flex; 
+  justify-content: center; 
+  flex-wrap: wrap;
+  gap: 2rem;  
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+.cars2 .item2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  background: #f9f9f9;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 1rem;
+  max-width: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cars2 .item2:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.cars2 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1.5rem;
+  margin-bottom: 1rem;
+  transition: border-radius 1s ease, transform 0.3s ease;
+  cursor: pointer;
+  transform-origin: center center;
+}
+
+.cars2 img:hover {
+  border-radius: 3rem;
+  transform: scale(1.1);
+}
+
+.cars2 img:active {
+  transform: scale(1.2);
+}
+
+.cars2 p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-family: "vazir";
+  color: #444;
+  padding: 0.8rem 1rem;
+  border: 1px inset #ddd;
+  border-radius: 1rem;
+  max-width: 300px;
+  max-height: 120px;
+  overflow-y: auto;
+  opacity: 0.7;
+  transition: opacity 0.5s ease, transform 0.5s ease, color 0.3s ease;
+}
+
+.cars2 p:hover {
+  opacity: 1;
+  color: #222;
+  transform: translateY(-3px);
+}
+
+/* ریسپانسیو موبایل */
+@media screen and (max-width: 767px) {
+  .cars2 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cars2 .item2 {
+    max-width: 90%;
+  }
+}
+
+/* ریسپانسیو تبلت و بزرگتر */
+@media screen and (min-width: 768px) {
+  .cars2 {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .cars2 img {
+    margin-top: 1rem;
+    width: 40vw;
+  }
+  .search {
+    height: 20vh;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .cars2 {
+    justify-content: space-evenly;
+  }
+  .cars2 img {
+    margin-top: 2rem;
+    width: 30vw;
+    height: auto;
+  }
+  .logo-img {
+    height: 25vh;
+    width: 20vw;
+  }
+}
+
+.cars3 {
+  display: flex; 
+  justify-content: center; 
+  flex-wrap: wrap;
+  gap: 2rem;  
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+.cars3 .item3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  background: #f9f9f9;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 1rem;
+  max-width: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cars3 .item3:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.cars3 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1.5rem;
+  margin-bottom: 1rem;
+  transition: border-radius 1s ease, transform 0.3s ease;
+  cursor: pointer;
+  transform-origin: center center;
+}
+
+.cars3 img:hover {
+  border-radius: 3rem;
+  transform: scale(1.1);
+}
+
+.cars3 img:active {
+  transform: scale(1.2);
+}
+
+.cars3 p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-family: "vazir";
+  color: #444;
+  padding: 0.8rem 1rem;
+  border: 1px inset #ddd;
+  border-radius: 1rem;
+  max-width: 300px;
+  max-height: 120px;
+  overflow-y: auto;
+  opacity: 0.7;
+  transition: opacity 0.5s ease, transform 0.5s ease, color 0.3s ease;
+}
+
+.cars3 p:hover {
+  opacity: 1;
+  color: #222;
+  transform: translateY(-3px);
+}
+
+/* ریسپانسیو موبایل */
+@media screen and (max-width: 767px) {
+  .cars3 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cars3 .item3 {
+    max-width: 90%;
+  }
+}
+
+/* ریسپانسیو تبلت و بزرگتر */
+@media screen and (min-width: 768px) {
+  .cars3 {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .cars3 img {
+    margin-top: 1rem;
+    width: 40vw;
+  }
+  .search {
+    height: 20vh;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .cars3 {
+    justify-content: space-evenly;
+  }
+  .cars3 img {
+    margin-top: 2rem;
+    width: 30vw;
+    height: auto;
+  }
+  .logo-img {
+    height: 25vh;
+    width: 20vw;
+  }
+}
+
+.about-section{
+  padding: 50px 20px;
+  background-color: #f8f8f8;
+  text-align: center;
+
+}
+.about-section h2{
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-family: "vazir";
+
+}
+.about-section p{
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 16px;
+  font-family: "vazir";
+  color: #555;
+}
+
+
+.footer {
+  background-color: cadetblue;
+  display: flex;
+  justify-content: space-around;
+  direction: rtl;
+  font-family: "vazir", sans-serif;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem 1rem;
+  color: white;
+  box-shadow: inset 0 5px 10px rgba(0,0,0,0.1);
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.footer > div {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight:normal;
+  max-width: 300px;
+  min-width: 220px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.footer-title {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  border-bottom: 2px solid #ffd700;
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.footer p {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+  border-bottom: 2px dashed #f3e38a;
+  padding-bottom: 0.5rem;
+}
+
+/* ریسپانسیو موبایل: ستونی شدن بخش‌ها */
+@media screen and (max-width: 767px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+  .footer > div {
+    max-width: 100%;
+    min-width: auto;
+    margin-bottom: 1.5rem;
+  }
+}
+

@@ -1,0 +1,203 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.header {
+  background: linear-gradient(90deg, #4e9ca0, #357e81);
+  border-bottom: 2px solid white;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.logo-img {
+  height: 15vh;
+  width: 50vw;
+}
+
+
+@media screen and (min-width: 768px) {
+  .logo-img {
+    height: 25vh;
+    width: 25vw;
+  }
+}
+
+.form {
+    width: 100%;
+    margin:10rem auto;
+    border: 2px solid ;
+    padding-right: 1rem;
+    background-color: cadetblue;
+    border-radius: 1rem;
+}
+
+
+.title {
+    font-family: "Vazir";
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    margin: 1rem auto;
+
+}
+@font-face {
+    font-family: "Vazir";
+    src: url(../font/Vazir.ttf) format("truetype");
+}
+
+.form label {
+    font-family: "BKOODB";
+    font-size: 1.2rem;
+}
+
+@font-face {
+    font-family: "BKOODB";
+    src: url(../font/BKOODB.TTF) format("truetype");
+}
+
+
+input:not([type="checkbox"]) {
+    width: 50vw;
+    margin: 1rem auto;
+    border: 1px solid whitesmoke;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-family: "Vazir";
+    padding-right: 0.5rem;
+  border: 2px solid #ffffffaa;
+  padding: 0 1.5rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  box-shadow: inset 0 0 8px rgba(255,255,255,0.3);
+  transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
+}
+input::placeholder {
+  color: #eee;
+  opacity: 0.8;
+}
+
+input:hover,
+input:focus {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-color: #ffd700;
+  color: #222;
+  outline: none;
+  box-shadow: 0 0 10px #ffd700;
+}
+
+#submit,
+#reset {
+    width: 30vw;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.textarea {
+    width: 80vw;
+    font-family: "Vazir";
+    font-size: 1rem;
+    border: 1px solid whitesmoke;
+    border-radius: 1rem;
+    padding-right: 0.5rem;
+}
+
+@media screen and (min-width:768px) {
+    .form{
+        width: 75vw;
+        padding: 1rem;
+        margin:  2rem auto;
+    }
+    input:not([type="checkbox"]){
+        width: 65vw;
+        padding-right: 0.5rem;
+    }
+
+    .textarea{
+        width: 65vw;
+        padding-right: 0.5rem;
+    }
+    #submit , #reset{
+        width: 20vw;
+    }
+}
+@media screen and (min-width:1024px) {
+    .form{
+        width: 45vw;
+        padding: 1rem;
+        margin:  2rem auto;
+    }
+    input:not([type="checkbox"]){
+        width: 40vw;
+        padding-right: 0.5rem;
+    }
+    .textarea{
+        width: 40vw;
+        padding-right: 0.5rem;
+    }
+    #submit , #reset{
+        width: 10vw;
+    }
+}
+.footer {
+  background-color: cadetblue;
+  display: flex;
+  justify-content: space-around;
+  direction: rtl;
+  font-family: "vazir", sans-serif;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem 1rem;
+  color: white;
+  box-shadow: inset 0 5px 10px rgba(0,0,0,0.1);
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.footer > div {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight:normal;
+  max-width: 300px;
+  min-width: 220px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.footer-title {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  border-bottom: 2px solid #ffd700;
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.footer p {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+  border-bottom: 2px dashed #ffeb78;
+  padding-bottom: 0.5rem;
+}
+
+/* ریسپانسیو موبایل: ستونی شدن بخش‌ها */
+@media screen and (max-width: 767px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+  .footer > div {
+    max-width: 100%;
+    min-width: auto;
+    margin-bottom: 1.5rem;
+  }
+}
